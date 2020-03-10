@@ -4,7 +4,7 @@ class Service {
   constructor(model) {
     this.model = model;
     this.getAll = this.getAll.bind(this);
-    this.findById = this.findById.bind(this);
+    this.find = this.find.bind(this);
     this.insert = this.insert.bind(this);
     this.update = this.update.bind(this);
     this.delete = this.delete.bind(this);
@@ -67,9 +67,9 @@ class Service {
       };
     }
   }
-  async findById(id) {
+  async find(title) {
     try {
-      let item = await this.model.findById(id);
+      let item = await this.model.find(title);
       if (!item)
         return {
           error: true,

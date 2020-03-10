@@ -4,7 +4,7 @@ class Controller {
     constructor(service) {
       this.service = service;
       this.getAll = this.getAll.bind(this);
-      this.findById = this.findById.bind(this);
+      this.find = this.find.bind(this);
       this.insert = this.insert.bind(this);
       this.update = this.update.bind(this);
       this.delete = this.delete.bind(this);
@@ -14,10 +14,10 @@ class Controller {
       return res.status(200).send(await this.service.getAll(req.query));
     }
     
-    async findById(req, res){
-      const { id } = req.params;
-      console.log(req.params.id);
-      let response = await this.service.findById(id);
+    async find(req, res){
+      const { title } = req.params;
+      console.log(req.params);
+      let response = await this.service.find({title});
       return res.status(response.statusCode).send(response);
     }
     async insert(req, res) {
