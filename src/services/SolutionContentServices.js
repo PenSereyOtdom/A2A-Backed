@@ -1,6 +1,6 @@
-import Solution from './Solution';
+import Service from './Service';
 
-class SolutionContentService extends Solution {
+class SolutionContentService extends Service {
   constructor(model) {
     super(model);
   }

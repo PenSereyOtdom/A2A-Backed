@@ -8,5 +8,6 @@ export default (app) => {
   app.post(`/api/service`, ServiceContentController.insert);
   // Solution ROUTES
   app.get(`/api/solution`, SolutionContentController.getAll);
+  app.get(`/api/solution/:id`, SolutionContentController.findById);
   app.post(`/api/solution`, SolutionContentController.insert);
 }
