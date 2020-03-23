@@ -100,7 +100,7 @@ class Service {
       return {
         error: true,
         statusCode: 500,
-        error
+
       };
     }
   }
@@ -116,7 +116,7 @@ class Service {
       return {
         error: true,
         statusCode: 500,
-        error
+
       };
     }
   }
@@ -154,7 +154,7 @@ class Service {
       return {
         error: true,
         statusCode: 500,
-        error
+
       };
     }
   }

@@ -1,10 +1,11 @@
-import mongoose from "mongoose";
 
+import mongoose from "mongoose";
+const dotenv = require("dotenv");
+dotenv.config();
 class Connection {
   constructor() {
     const url =
-      process.env.MONGODB_URI || `mongodb://localhost:27017/a2adigital`;
-    console.log("Establish new connection with url", url);
+        process.env.MONGODB_URI;
     mongoose.Promise = global.Promise;
     mongoose.set("useNewUrlParser", true);
     mongoose.set("useFindAndModify", false);

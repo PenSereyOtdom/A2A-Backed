@@ -6,8 +6,7 @@ const solutionContentService = new SolutionContentService(
     new Solution().getInstance()
   );
 
-console.log(solutionContentService.model);
-  
+
 class SolutionContentController extends Controller {
 
   constructor(service) {

@@ -6,8 +6,7 @@ const serviceContentService = new ServiceContentService(
     new Service().getInstance()
   );
 
-console.log(serviceContentService.model);
-  
+
 class ServiceContentController extends Controller {
 
   constructor(service) {
